@@ -24,7 +24,7 @@ public class LogInPage extends ProjectSpecification {
 	@FindBy(xpath="//div[@data-testid='login-cta']")
 	WebElement loginbutton;
 	
-	@FindBy(xpath="//div[text()='Hi Saranya']")
+	@FindBy(xpath="//div[text()='Hi Deva']")
 	WebElement loginmsg;
 	
 	@FindBy(xpath="(//input[@class='css-1cwyjr8 r-homxoj r-13awgt0 r-ubezar r-tmtnm0 r-oxtfae r-10paoce r-ymttw5 r-9qu9m4'])[1]")
@@ -39,11 +39,7 @@ public class LogInPage extends ProjectSpecification {
 	@FindBy(xpath="//div[text()='Please enter a valid password']")
 	WebElement invalidpassword;
 	
-	//@FindBy(xpath="(//input[@class='css-1cwyjr8 r-homxoj r-13awgt0 r-ubezar r-tmtnm0 r-oxtfae r-10paoce r-ymttw5 r-9qu9m4'])[2]")
-	//WebElement password;
-		
 	
-	//constructor initialization 
 	public LogInPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);

@@ -25,7 +25,6 @@ public class HomePage extends ProjectSpecification {
 				
 	}
 	
-	//click signup button & constructor chaining to signup page
 	public SignInPage clickSignUp() throws InterruptedException {
 		click(signup);
 		sleep();
@@ -33,21 +32,17 @@ public class HomePage extends ProjectSpecification {
 		
 	}
 	
-	//click login button & constructor chaining to login page
 	public LogInPage clickLogIn() {
 		click(login);
 		return new LogInPage(driver);
 				
 	}
 	
-	//click flight button & constructor chaining to FlightBookingPage page
 	public FlightBookingPage clickFlights()  {		
 		click(flights);	
 		return new FlightBookingPage(driver);
     }
 	
-	
-	//click logout button & constructor chaining to LogOutPage page
 	public LogOutPage clickLogout()  {		
 		return new LogOutPage(driver);
 		

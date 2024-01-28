@@ -15,7 +15,7 @@ public class LogOutPage extends ProjectSpecification {
 	@FindBy(xpath="(//div[@class='css-76zvg2 r-homxoj'])[1]")
 	WebElement logoutbutton;
 	
-	@FindBy(xpath="//div[text()='Hi Saranya']")
+	@FindBy(xpath="//div[text()='Hi Deva']")
 	WebElement loginmsg;
 	
 	//constructor initialization 
