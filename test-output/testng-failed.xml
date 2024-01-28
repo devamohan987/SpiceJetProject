@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="2">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="https://www.spicejet.com/"/>
+  <listeners>
+    <listener class-name="utility.Listner"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" verbose="2">
+    <classes>
+      <class name="testcase.LogInWithEmail">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="browserLaunch"/>
+          <include name="logInTestWithEmail" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.LogInWithEmail -->
+      <class name="testcase.LogInWithPhno">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="browserLaunch"/>
+          <include name="setup"/>
+          <include name="logInTestWithPhone" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcase.LogInWithPhno -->
+      <class name="testcase.LogOut">
+        <methods>
+          <include name="logoutTest" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="browserLaunch"/>
+        </methods>
+      </class> <!-- testcase.LogOut -->
+      <class name="testcase.SignUp">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="signUpTest" invocation-numbers="0"/>
+          <include name="browserLaunch"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.SignUp -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test thread-count="5" name="EdgeTest(failed)" verbose="2">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="testcase.RoundTrip">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="browserLaunch"/>
+          <include name="setup"/>
+          <include name="roundTripTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcase.RoundTrip -->
+      <class name="testcase.OneWayTrip">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="browserLaunch"/>
+          <include name="oneWayTripTest" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.OneWayTrip -->
+    </classes>
+  </test> <!-- EdgeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
